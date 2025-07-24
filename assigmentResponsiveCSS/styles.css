@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.work-sans-normal-font {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* --------------Text Colors----------------- */
+.text-dark01 {
+  color: rgba(137, 135, 161, 1);
+}
+
+.text-dark02 {    
+  color: rgba(37, 36, 50, 1);
+  font-weight: 700;
+}
+
+.text-dark03 {
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+}
+
+.text-dark04 {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.text-org04 {
+  color: rgba(233, 90, 8, 1);
+  font-weight: 700;
+}
+
+/* -----------------Shared Styles----------------- */
+.display-flex {
+  display: flex;
+}
+
+
+/* -----------Header Styles------------- */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* background-color: #fff; */
+  margin-top: 30px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  list-style: none;
+  margin-right: 30px;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+/* Cart alignment */
+.nav-link {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 5px;
+}
+
+/* -------------Banner section Styles------------- */
+.banner {
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 0;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 200px;
+}
+
+.banner div:first-child {
+  flex: 1;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.banner div:last-child {
+  flex: 1;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fresh-flower-title {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+
+.fresh-flower-description {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* --------------Responsive Styles For Mobile Device---------------- */
+
+/* Logo And Navbar Section */
+@media screen and (max-width: 768px){
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 15px 10px;
+    width: auto;
+    box-sizing: border-box;
+  }
+
+  /* Logo positioning - stays on left */
+  .logo {
+    order: 1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Navbar positioning - stays on right */
+  .navbar {
+    order: 2;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Hide navigation text items on mobile */
+  .nav-item:nth-child(1),
+  .nav-item:nth-child(2), 
+  .nav-item:nth-child(3) {
+    display: none;
+  }
+
+  /* Keep cart visible - stays on right */
+  .nav-item:last-child {
+    display: flex;
+    margin-right: 0;
+    white-space: nowrap;
+  }
+
+  .nav-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /* Banner section mobile styles */
+  .banner {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 50px;
+    padding: 0;
+    display: flex;
+  }
+
+  .banner div:last-child {
+    order: 1;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+
+  /* Image full width styling */
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .banner div:first-child {
+    order: 2;
+    padding: 20px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .fresh-flower-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  .fresh-flower-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .banner div:first-child {
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+  .banner div:last-child {
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+}
