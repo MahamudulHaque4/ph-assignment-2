@@ -9,9 +9,9 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
@@ -56,7 +56,6 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  /* background-color: #fff; */
   margin-top: 30px;
   margin-left: 150px;
   margin-right: 150px;
@@ -132,6 +131,83 @@ main {
   line-height: 1.5;
   margin-bottom: 0;
 }
+
+/* -------------- Plant Section Styles -------------- */
+.plant-content {
+  align-items: center;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.plant-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.plant-description {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-left: 220px;
+  margin-right: 220px;
+  margin-top: 890;
+  margin-bottom: 150;
+  text-align: center;
+}
+
+.plant-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 150px;
+  margin-right: 150px;
+  text-align: center;
+  gap: 30px;
+}
+
+.plant-card {
+  border: 1px solid none;
+  width: 270px;
+  height: 485px;
+  /* g */
+  display: flex; 
+  flex-direction: column;
+  margin-bottom: 5px;
+  /* justify-content: space-between; */
+}
+
+.plant-name {
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.plant-number {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  width: 100%;
+  background-color: rgba(233, 90, 8, 1);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: rgb(210, 0, 147);
+}
+
+/* Plant lover section styles */
+
 
 /* --------------Responsive Styles For Mobile Device---------------- */
 
@@ -250,6 +326,76 @@ main {
   .banner div:last-child {
     overflow: visible;
     box-sizing: border-box;
+  }
+
+  /* Plant section mobile styles */
+  .plant-content {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 0 10px;
+  }
+
+  .plant-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .plant-description {
+    font-size: 1rem;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .plant-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  /* Hide the last 2 cards on mobile to show only 6 */
+  .plant-card:nth-child(7),
+  .plant-card:nth-child(8) {
+    display: none;
+  }
+
+  .plant-card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .plant-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .plant-name {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+
+  .plant-number {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  .add-to-cart-btn {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    width: 100%;
   }
 
 }
