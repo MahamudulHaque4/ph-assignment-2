@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 
 .work-sans-normal-font {
   font-family: "Work Sans", sans-serif;
@@ -12,6 +21,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 main {
@@ -98,7 +109,7 @@ main {
   padding: 40px 0;
   margin-left: 150px;
   margin-right: 150px;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .banner div:first-child {
@@ -167,7 +178,8 @@ main {
 
 .plant-card {
   border: 1px solid none;
-  width: 270px;
+  width: 100%;
+  max-width: 270px;
   height: 485px;
   display: flex; 
   flex-direction: column;
@@ -391,6 +403,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 .join h1 {
   font-size: 50px;
@@ -453,21 +470,39 @@ main {
 
 /* --------------Responsive Styles For Mobile Device---------------- */
 
-/* Logo And Navbar Section */
 @media screen and (max-width: 768px){
-  /* Prevent horizontal scroll */
+
   * {
     box-sizing: border-box;
+    max-width: 100%;
   }
   
-   body {
+  html, body {
     overflow-x: hidden;
     max-width: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
 
   main {
+    max-width: 100%;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  section {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container,
+  .banner,
+  .plant-content,
+  .plant-container,
+  .plant-lover,
+  .join-section,
+  .footer-section {
     max-width: 100%;
     overflow-x: hidden;
   }
@@ -486,7 +521,6 @@ main {
     overflow: hidden;
   }
 
-  /* Logo positioning  */
   .logo {
     order: 1;
     flex-shrink: 0;
@@ -494,7 +528,6 @@ main {
     align-items: center;
   }
 
-  /* Navbar positioning  */
   .navbar {
     order: 2;
     flex-shrink: 0;
@@ -528,7 +561,7 @@ main {
     margin-left: 0;
     margin-right: 0;
     margin-top: 50px;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     display: flex;
     width: 100%;
     max-width: 100%;
@@ -543,12 +576,11 @@ main {
     padding: 0;
   }
 
-  /* Image full width styling */
   .banner img {
     width: 100%;
     height: auto;
     max-width: 100%;
-    margin: 0;
+    margin: none;
     display: block;
   }
 
@@ -569,14 +601,15 @@ main {
     font-size: 1.8rem;
     margin-bottom: 20px;
     margin-top: 0;
+    margin-left: 15px;
     text-align: left;
-    line-height: 1.2;
+    /* line-height: 1.2; */
   }
 
   .fresh-flower-description {
     font-size: 0.9rem;
     line-height: 1.5;
-    margin: 0;
+    margin-left: 15px;
     padding: 0;
     text-align: left;
     max-width: 100%;
@@ -623,7 +656,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
     margin-left: 0;
     margin-right: 0;
-    gap: 15px;
+    gap: 10px;
     padding: 0 20px;
     width: 100%;
     max-width: 100%;
@@ -637,6 +670,7 @@ main {
 
   .plant-card {
     width: 100%;
+    max-width: 100%;
     height: auto;
     margin-bottom: 8px;
     padding: 10px;
@@ -669,7 +703,7 @@ main {
     width: 100%;
   }
 
-  /* Plant lover section mobile responsive */
+  /* Plant lover responsive */
   .plant-lover {
     flex-direction: column;
     margin-left: 0;
@@ -844,9 +878,12 @@ main {
     height: 400px;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
     width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     padding: 40px 20px;
     box-sizing: border-box;
     overflow: hidden;
