@@ -169,11 +169,9 @@ main {
   border: 1px solid none;
   width: 270px;
   height: 485px;
-  /* g */
   display: flex; 
   flex-direction: column;
   margin-bottom: 5px;
-  /* justify-content: space-between; */
 }
 
 .plant-name {
@@ -206,8 +204,53 @@ main {
   background-color: rgb(210, 0, 147);
 }
 
-/* Plant lover section styles */
+/* -------------Plant lover section styles-------------- */
+.plant-lover {
+  align-items: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 150px;
+  position: relative;
+  
+}
 
+.plant-lover-container {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  gap: 60px;
+  /* margin-top: 38px;
+  margin-bottom: 38px; */
+}
+
+.plant-lover-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-top: 38px;
+  margin-bottom: 20px;
+}
+
+.flw-lover {
+  margin: auto;
+  padding: auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.line-gap {
+  padding: 8px;
+}
+
+.badge-container {
+  position: absolute;
+  top: -130px;
+  left: 350px;
+}
+
+.badge {
+  width: 300px;
+}
 
 /* --------------Responsive Styles For Mobile Device---------------- */
 
