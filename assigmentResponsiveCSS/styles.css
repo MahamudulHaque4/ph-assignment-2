@@ -252,10 +252,184 @@ main {
   width: 300px;
 }
 
+/* -----------------Join Section Styles---------------- */
+
+.join-section {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.join-sec-part-1 {
+  margin-top: 130px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.join-sec-part-1-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.join-sec-part-1-description {
+  font-size: 1.125rem;
+  margin-top: auto;
+  margin-bottom: 40px;
+  margin-left: 225px;
+  margin-right: 225px;
+}
+
+.join-sec-part-2 {
+  display: flex;
+  gap: 15px;
+}
+
+.join-sec-img-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 0 0 367px;
+}
+
+.join-sec-img-2 {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.latest-img-1, .latest-img-2, .latest-img-3 {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  min-height: 200px;
+}
+
+.latest-img-1 {
+  width: 367px;
+  height: 206px;
+}
+
+.latest-img-2 {
+  width: 367px;
+  height: 206px;
+}
+
+.latest-img-3 {
+  height: 100%;
+  min-height: 426px;
+  width: 100%;
+  flex: 1;
+}
+
+.latest-img-1 img, .latest-img-2 img, .latest-img-3 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.latest-img-1::before, .latest-img-2::before, .latest-img-3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.join-image-h, .join-image-p {
+  position: relative;
+  z-index: 3;
+  margin: 0;
+}
+
+.join-image-h {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.join-image-p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.latest-img-3 .join-image-h {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.latest-img-3 .join-image-p {
+  font-size: 20px;
+}
+
+/* ------------------ Join Section Styles ----------------- */
+.join {
+  background-image: url("../assets/news-letter-bg.png");
+  height: 533px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 120px;
+  margin-bottom: 100px;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.join h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.join-sub-container {
+  display: flex;
+}
+.join-sub-container input {
+  padding: 15px;
+  width: 640px;
+  border: none;
+}
+.join-sub-container button {
+  padding: 15px 30px;
+  background-color: #e95a08;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  border: none;
+}
+
 /* --------------Responsive Styles For Mobile Device---------------- */
 
 /* Logo And Navbar Section */
 @media screen and (max-width: 768px){
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  main {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .container {
     display: flex;
     flex-direction: row;
@@ -264,8 +438,10 @@ main {
     margin-left: 10px;
     margin-right: 10px;
     padding: 15px 10px;
-    width: auto;
+    width: calc(100% - 20px);
+    max-width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
   }
 
   /* Logo positioning - stays on left */
@@ -314,6 +490,10 @@ main {
     margin-top: 50px;
     padding: 0;
     display: flex;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .banner div:last-child {
@@ -336,10 +516,13 @@ main {
     order: 2;
     padding: 20px 15px;
     width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .fresh-flower-title {
@@ -376,6 +559,9 @@ main {
     margin-left: 15px;
     margin-right: 15px;
     padding: 0 10px;
+    width: calc(100% - 30px);
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .plant-title {
@@ -399,9 +585,11 @@ main {
     margin-right: 15px;
     gap: 8px;
     padding: 0 10px;
+    width: calc(100% - 30px);
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  /* Hide the last 2 cards on mobile to show only 6 */
   .plant-card:nth-child(7),
   .plant-card:nth-child(8) {
     display: none;
@@ -439,6 +627,212 @@ main {
     font-size: 0.9rem;
     margin-top: 20px;
     width: 100%;
+  }
+
+  /* Plant lover responsive */
+  .plant-lover {
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 50px;
+    gap: 30px;
+    width: calc(100% - 30px);
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .plant-lover-container {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20px;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .plant-lover-image {
+    order: 1;
+    width: 100%;
+  }
+
+  .plant-lover-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .plant-lover-content {
+    order: 2;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .plant-lover-title {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .flw-lover {
+    font-size: 1rem;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .flw-lover li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .flw-lover li:before {
+    content: "•";
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+
+  .line-gap {
+    padding: 4px;
+  }
+
+  .badge-container {
+    display: none;
+  }
+
+  .badge {
+    display: none;
+  }
+
+  /* Join Section Mobile Styles */
+  .join-section {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .join-sec-part-1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .join-sec-part-1-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .join-sec-part-1-description {
+    font-size: 0.9rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    line-height: 1.5;
+  }
+
+  .join-sec-part-2 {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .join-sec-img-1 {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    flex: none;
+  }
+
+  .join-sec-img-2 {
+    width: 100%;
+    flex: none;
+  }
+
+  .latest-img-1, .latest-img-2, .latest-img-3 {
+    width: 100%;
+    height: 180px;
+    min-height: 180px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .latest-img-3 {
+    height: 200px;
+    min-height: 200px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .join-image-h {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .join-image-p {
+    font-size: 12px;
+  }
+
+  .latest-img-3 .join-image-h {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .latest-img-3 .join-image-p {
+    font-size: 14px;
+  }
+
+  /* Join Newsletter Section Mobile Styles */
+  .join {
+    height: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .join h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .join-sub-container {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .join-sub-container input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+  }
+
+  .join-sub-container button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
   }
 
 }
